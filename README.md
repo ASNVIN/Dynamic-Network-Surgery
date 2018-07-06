@@ -1,5 +1,6 @@
-# Dynamic network surgery
-
+# Dynamic network surgery 修剪+拼接恢复
+	这篇文章也是关于参数的修剪，但是多了一个拼接的步骤，可以大幅度恢复修剪造成的精度损失，并且能有效的提升压缩率。
+	
 Dynamic network surgery is a very effective method for DNN pruning. To better use it with python and matlab, you may also need a [classic version](https://github.com/BVLC/caffe/tree/aa2a6f55b9e50b29d607aaee0fae19bd085d6565) of the [Caffe framework](http://caffe.berkeleyvision.org).
 For the convolutional and fully-connected layers to be pruned, change their layer types to "CConvolution" and "CInnerProduct" respectively. Then, pass "cconvolution_param" and "cinner_product_param" messages to these modified layers for better pruning performance. 
 
